@@ -1,5 +1,7 @@
 # Machine Learning Course Notes
 
+[This Google ML Crash Course](https://developers.google.com/machine-learning/crash-course)
+
 ## TensorFlow with NVIDIA GPU Support
 
 A separate environment was created using [Miniconda](https://docs.conda.io/en/latest/miniconda.html) as directed by the [TensorFlow docs](https://www.tensorflow.org/install/pip)
