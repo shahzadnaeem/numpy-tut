@@ -18,9 +18,9 @@
     - Create a `tf` environment
     - Activate to set up
       - Install Cuda and cuDNN
-        - Cuda - 11.8.0
+        - Cuda Toolkit - 11.8.0
           - `conda install -c conda-forge cudatoolkit=11.8.0`
-        - cuDNN - 8.9.0.131
+        - cuDNN - 8.9.0.131 (on CUDA 12)
           - `pip install nvidia-cudnn-cu12=8.9.0.131`
           - NOTE: Don't forget the environment setup!
       - Install TensorFlow
@@ -47,4 +47,9 @@
       - Setup environment
       - Verify install - Section 6
   - Try here and see if it finally works
-    - NOTE: Must use activated `tf` environment
+    - NOTE: Must use activated `tf` conda environment
+      - `$ conda activate tf`
+      - `$ cd ~/projects/ml/numpy-tut`
+      - `$ c.`
+      - Run `simple-lr.ipynb`
+        - NOTE: IT WORKS!
