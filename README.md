@@ -22,7 +22,8 @@ This was followed by quite a few steps to enable TensorFlow to use the NVIDIA GP
 - Install [TensorFlow as directed](https://www.tensorflow.org/install/pip)
   - Miniconda
     - Create a `tf` environment
-    - Activate to set up
+    - Activate for following setup steps
+      - `conda activate tf`
       - Install Cuda and cuDNN
         - Cuda Toolkit - 11.8.0
           - `conda install -c conda-forge cudatoolkit=11.8.0`
@@ -41,7 +42,8 @@ This was followed by quite a few steps to enable TensorFlow to use the NVIDIA GP
         $ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib' >> $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
         ```
 
-      - Verify install - Section 6
+      - Verify install - Section 6, specifically GPU setup
+        - `python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"`
   - Try here and see if it finally works
     - NOTE: Must use activated `tf` conda environment
   
@@ -51,7 +53,4 @@ This was followed by quite a few steps to enable TensorFlow to use the NVIDIA GP
       $ code .
       ```
 
-      ```text
-      Run `simple-lr.ipynb`
-        NOTE: IT WORKS!
-      ```
+      Run All in `simple-lr.ipynb` - should have more zip!
