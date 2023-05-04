@@ -1,12 +1,18 @@
-# CUDA Setup
+# Machine Learning Course Notes
 
-## NVIDIA and TensorFlow
+## TensorFlow with NVIDIA GPU Support
+
+A separate environment was created using [Miniconda](https://docs.conda.io/en/latest/miniconda.html) as directed by the [TensorFlow docs](https://www.tensorflow.org/install/pip)
+
+The existing manually installed Fedora 36 NVIDIA Drivers were uninstalled and replaced by a `dnf` installation of the `cuda` meta-package
+
+This was followed by quite a few steps to enable TensorFlow to use the NVIDIA GPU
 
 [This guide and linked guides used](https://gist.github.com/p-karanthaker/e9e1f50457ec7db7ebb4904ca9a9f6de)
 
 - Did not use `akmod-nvidia` as kernel updates not done along with software updates
 - Uninstall NVIDIA drivers
-  - Used `--uninstall` option of lates downloaded version
+  - Used `--uninstall` option of latest downloaded version
 - Switch to non-graphical UI and reboot
 - Add fedora36 repo for CUDA and install `cuda`
   - `sudo dnf install cuda`
@@ -52,4 +58,4 @@
       - `$ cd ~/projects/ml/numpy-tut`
       - `$ c.`
       - Run `simple-lr.ipynb`
-        - NOTE: IT WORKS!
+        - NOTE: IT WORKS! 
